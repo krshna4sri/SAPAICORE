@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: code-pipeline # executable id, must be unique across all your workflows (YAML files), please modify this to any value (e.g. code-pipeline-12345) if you are not the only user of your SAP AI Core instance.
+  name: sapaicore123 # executable id, must be unique across all your workflows (YAML files), please modify this to any value (e.g. code-pipeline-12345) if you are not the only user of your SAP AI Core instance.
   annotations:
     scenarios.ai.sap.com/description: "code to SAP AI Core"
     scenarios.ai.sap.com/name: "SAPAICore"
     executables.ai.sap.com/description: "Get Business Partners"
-    executables.ai.sap.com/name: "House Price (Sklearn Example)"
+    executables.ai.sap.com/name: "Get Business Partners"
   labels:
     scenarios.ai.sap.com/id: "sapai-core"
     ai.sap.com/version: "1.0"
