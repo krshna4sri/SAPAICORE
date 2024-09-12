@@ -22,7 +22,7 @@ spec:
 
   - name: mycodeblock1
     container:
-      image: docker.io/srikanthcr/business-partner-summarizer:latest # Your docker image name
+      image: srikanthcr/business-partner-summarizer:latest # Your docker image name
       command: ["/bin/sh", "-c"]
       args:
         - "python /SAP Core AI Work/ai.py"
