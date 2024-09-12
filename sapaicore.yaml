@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: sapaicore123 # executable id, must be unique across all your workflows (YAML files), please modify this to any value (e.g. code-pipeline-12345) if you are not the only user of your SAP AI Core instance.
+  name: sapaicore123
   annotations:
     scenarios.ai.sap.com/description: "code to SAP AI Core"
     scenarios.ai.sap.com/name: "SAPAICore"
     executables.ai.sap.com/description: "Get Business Partners"
     executables.ai.sap.com/name: "Get Business Partners"
   labels:
-    scenarios.ai.sap.com/id: "sapai-core"
+    scenarios.ai.sap.com/id: "sapai"
     ai.sap.com/version: "1.0"
 spec:
   imagePullSecrets:
-    - name: credstutorialrepo # your docker registry secret
+    - name: credstutorialrepo
   entrypoint: mypipeline
   templates:
   - name: mypipeline
@@ -22,7 +22,7 @@ spec:
 
   - name: mycodeblock1
     container:
-      image: srikanthcr/business-partner-summarizer:latest # Your docker image name
+      image: docker.io/srikanthcr/business-partner-summarizer:latest
       command: ["/bin/sh", "-c"]
       args:
         - "python /SAP Core AI Work/ai.py"
